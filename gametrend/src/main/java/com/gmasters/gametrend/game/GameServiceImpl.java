@@ -17,5 +17,4 @@ public class GameServiceImpl implements GameService {
 	public List<GameDTO> gamelist(int page) {
 		return dao.gamelist(page);
 	}	
-	
 }

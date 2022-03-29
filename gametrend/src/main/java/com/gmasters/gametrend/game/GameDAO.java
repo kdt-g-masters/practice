@@ -21,11 +21,10 @@ public class GameDAO {
 //	public int totalcount() {
 //		return session.selectOne("totalgamecnt");
 //	}
-//	
 //	public int totalcount(String platform) {
 //		return session.selectOne("platformtotal");
 //	}
-	//	//ÇÃ·§Æûº° °ÔÀÓ·©Å· Á¶È¸
+//ÇÃ·§Æûº° °ÔÀÓ·©Å· Á¶È¸
 //	public List<GameDTO> gamelist(String platform){
 //		return session.selectList("platformgamesearch", platform);
 //	}

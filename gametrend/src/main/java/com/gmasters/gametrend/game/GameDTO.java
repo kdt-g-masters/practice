@@ -45,6 +45,7 @@ public class GameDTO {
 		this.screenshot3 = screenshot3;
 		this.screenshot4 = screenshot4;
 	}
+	
 	public GameDTO(int gameNo, String name, String explanation, String genre1, String genre2, String genre3,
 			String platform, String thumbnail, int views, double rating, String releaseDate, String trailer,
 			String screenshot1, String screenshot2, String screenshot3, String screenshot4) {
