@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+
+
 @Controller
 public class ReviewController {
 	@Autowired
@@ -76,13 +78,13 @@ public class ReviewController {
 	@RequestMapping(value = "/insertReview", method = RequestMethod.POST, produces = {"application/json;charset=utf-8"})
 	@ResponseBody 
 	public String insertReview(ReviewDTO dto) {
-		System.out.println("½ÇÇàµÇ³ª");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½Ç³ï¿½");
 		int result = service.insertReview(dto);
 		if(result == 1) { 
-			return "{\"check\":\"¸®ºä ÀÔ·Â ¿Ï·áµÇ¾ú½À´Ï´Ù.\"}"; 
+			return "{\"check\":\"ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Ï·ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.\"}"; 
 		}
 		else {
-			return "{\"check\":\"¸®ºä ÀÛ¼º¶õÀ» È®ÀÎÇØ ÁÖ¼¼¿ä.\"}"; } 
+			return "{\"check\":\"ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ï¿½ï¿½.\"}"; } 
 	}
 	
 }
