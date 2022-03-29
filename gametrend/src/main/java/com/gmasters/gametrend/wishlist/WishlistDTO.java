@@ -27,5 +27,5 @@ public class WishlistDTO {
 		this.gameNo = gameNo;
 	}
 
-// source tree github test	
+// source tree branch	
 }
