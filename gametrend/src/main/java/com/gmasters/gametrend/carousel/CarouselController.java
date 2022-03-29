@@ -24,6 +24,8 @@ public class CarouselController {
 		return mv;
 	}
 	
+	// test1
+	
 //	@RequestMapping(value = "/insertcarousel", method = RequestMethod.GET )
 //	public String insertform() {
 //		return "admin/insertcarousel";
