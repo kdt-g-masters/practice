@@ -20,36 +20,36 @@ public class UserController {
 	@Qualifier("userService")
 	UserService service;
 	
-	// ·Î±×ÀÎ ÆäÀÌÁö
+	// ë¡œê·¸ì¸ í˜ì´ì§€
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public void loginform() {	
 	}
 	
-    // ·Î±×ÀÎ ½Ãµµ
+    // ë¡œê·¸ì¸ ì‹œë„
 	@RequestMapping(value="/login", method=RequestMethod.POST , produces = {"application/json;charset=utf-8"} )
 	@ResponseBody
 	public String loginAction(HttpServletRequest request, UserDTO dto) throws Exception {
 		UserDTO loginUser = service.loginUser(dto);
 		
 	if(loginUser != null) {
-		// ¼¼¼Ç ¾ÆÀÌµğ °¡Á®¿À±â
+		// ì„¸ì…˜ ì•„ì´ë”” ê°€ì ¸ì˜¤ê¸°
 		HttpSession session = request.getSession();
 		session.setAttribute("sessionid", loginUser.getId());
-		return "1";//{\"process\":\"Á¤»ó·Î±×ÀÎ\" , \"role\":\"user\"}";	
+		return "1";//{\"process\":\"ì •ìƒë¡œê·¸ì¸\" , \"role\":\"user\"}";	
 		}
 		else {
-		return "2";//"{\"process\":\"ºñÁ¤»ó·Î±×ÀÎ\" , \"role\":\"admin\"}";		
+		return "2";//"{\"process\":\"ë¹„ì •ìƒë¡œê·¸ì¸\" , \"role\":\"admin\"}";		
 		}
 		
 	}
 	
-	//¾ÆÀÌµğ Ã£±â ÆäÀÌÁö ÀÌµ¿
+	//ì•„ì´ë”” ì°¾ê¸° í˜ì´ì§€ ì´ë™
 	/*@RequestMapping(value="/login2", method=RequestMethod.GET)
 	public String findIdView() {
 		return "";
 	}*/
 	
-    // ¾ÆÀÌµğ Ã£±â ½ÇÇà
+    // ì•„ì´ë”” ì°¾ê¸° ì‹¤í–‰
 	/*@RequestMapping(value="/login2", method=RequestMethod.GET , produces = {"application/json;charset=utf-8"} )
 	public String findIdAction(UserDTO dto) {
 		UserDTO findId = service.findId(dto);
@@ -63,7 +63,7 @@ public class UserController {
 		
 	}*/
 	
-    /* // ºñ¹Ğ¹øÈ£ Ã£±â ÆäÀÌÁö·Î ÀÌµ¿
+    /* // ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸° í˜ì´ì§€ë¡œ ì´ë™
 	@RequestMapping(value="find_password_form")
 	public String findPasswordView() {
 		return "member/findPassword";
@@ -74,7 +74,7 @@ public class UserController {
 		HttpSession session = request.getSession();
 		String temp = (String) session.getAttribute("sessionid");
 		if (temp != null) {
-			System.out.println("¼¼¼Ç¿¡ ÀúÀåµÈ ¾ÆÀÌµğ: " + temp);
+			System.out.println("ì„¸ì…˜ì— ì €ì¥ëœ ì•„ì´ë””: " + temp);
 		}
 		return "index";
 	}
@@ -95,16 +95,17 @@ public class UserController {
 	}
 	
 	
-	// È¸¿ø°¡ÀÔ ¾ÆÀÌµğ Áßº¹È®ÀÎ ajax
+	// íšŒì›ê°€ì… ì•„ì´ë”” ì¤‘ë³µí™•ì¸ ajax
 	@RequestMapping(value="/join/checkid", method=RequestMethod.POST, produces={"application/json; charset=utf-8"})
 	@ResponseBody
 	public String checkId(String id) {
 		boolean result = service.checkId(id);
 		if (result == true) {
-			return "{\"result\": \"»ç¿ë °¡´ÉÇÑ ¾ÆÀÌµğÀÔ´Ï´Ù.\", \"state\": \"available\"}";
+			return "{\"result\": \"ì‚¬ìš© ê°€ëŠ¥í•œ ì•„ì´ë””ì…ë‹ˆë‹¤.\", \"state\": \"available\"}";
 		}
 		else {			
-			return "{\"result\": \"ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.\", \"state\": \"notAvailable\"}";
+			return "{\"result\": \"ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ì•„ì´ë”” ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.\", \"state\": \"notAvailable\"}";
 		}
 	}
 }
+/////
