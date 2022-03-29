@@ -7,3 +7,4 @@ public interface WishlistService {
 	public List<WishlistGameDTO> joinWishlistGame(String userId, int[] limit);
 	public List<WishlistDTO> selectAll();
 }
+// test
