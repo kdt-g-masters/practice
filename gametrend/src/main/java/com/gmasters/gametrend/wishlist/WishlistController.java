@@ -71,3 +71,4 @@ public class WishlistController {
 		return mv;
 	}
 }
+// sts github test
