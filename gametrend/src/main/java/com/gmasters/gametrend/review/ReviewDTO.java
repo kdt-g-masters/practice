@@ -1,8 +1,5 @@
 package com.gmasters.gametrend.review;
 
-
-
-
 public class ReviewDTO {
 	int reviewNo;
 	String userId;

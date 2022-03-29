@@ -1,7 +1,5 @@
 package com.gmasters.gametrend.review;
 
-
-
 import java.util.List;
 
 public interface ReviewService {
