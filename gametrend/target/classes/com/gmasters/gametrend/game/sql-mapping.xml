@@ -11,6 +11,7 @@
 		</foreach>
 	</select>
 	
+	
 <!-- <select id="gamebyplatform" resultType="gamedto" parameterType="String, int[]">
 		select * from game where platform=#{platform} order by rating desc limit
 	</select>
