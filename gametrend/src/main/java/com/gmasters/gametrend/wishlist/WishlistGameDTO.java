@@ -22,5 +22,5 @@ public class WishlistGameDTO {
 		this.gameDTO = gameDTO;
 	}
 	
-	
+	// branch test
 }
