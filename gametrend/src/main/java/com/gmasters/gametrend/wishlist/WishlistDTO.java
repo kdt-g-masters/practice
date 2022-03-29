@@ -26,6 +26,6 @@ public class WishlistDTO {
 	public void setGameNo(int gameNo) {
 		this.gameNo = gameNo;
 	}
-	
-	
+
+// source tree github test	
 }
