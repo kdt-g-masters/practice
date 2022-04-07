@@ -8,3 +8,4 @@ public interface WishlistService {
 	public List<WishlistDTO> selectAll();
 }
 // test
+// conflict test
